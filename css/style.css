@@ -1,0 +1,756 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-image: url(../image/bck.jpeg);
+    background-size: cover; */
+    background-color: rgb(11, 19, 19);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: goldenrod;
+    /* height: 6000px; */
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+/* start header---------------------------------------------------------------------------------------------------------- */
+.header{
+    width: 100%;
+    height: 65px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    opacity: 0.7;
+    z-index: 150;
+}
+.headerlogo{
+    height: 60px;
+    width: 200px;
+    padding-top: 5px;
+    float: left;
+}
+.headerul{
+    list-style: none;
+}
+.headerul li{
+    /* display: inline; */
+    float: right;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    /* transition: 1s; */
+    /* position: relative; */
+}
+.headerul li a::after{
+    content: "";
+    top: 100%;
+    left: -5px;
+    background-color: goldenrod;
+    width:0;
+    height: 3px;
+    visibility: hidden;
+    position: absolute;
+    display: block;
+    transition: 0.5s;
+}
+.headerul li a::before{
+    content: "";
+    bottom: 100%;
+    left: 105%;
+    background-color: goldenrod;
+    width:0;
+    height: 3px;
+    visibility: hidden;
+    position: absolute;
+    display: block;
+    transition: 0.5s;
+}
+.headerul li a:hover::before{
+    visibility: visible;
+    width: 109%;
+    left: -3px;
+} 
+.headerul li a:hover::after{
+    visibility: visible;
+    width: 109%;
+    left: -3px;
+} 
+.headerul li a{
+    font-size: 25px;
+    position: relative;
+}
+.headerul li a:hover{
+    color: chocolate;
+    border-left: 3px solid goldenrod;
+    border-right: 3px solid goldenrod;
+}
+/* end header---------------------------------------------------------------------------------------------------------------- */
+/* start head photo ---------------------------------------------------------------------------------------------------------*/
+.headparent{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../image/headphoto-background.jpg);
+    background-size: cover;
+    position: relative;
+}
+.head-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: 2s;
+}
+.headparent:hover .head-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+.headdetailes{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+}
+.headwelcome{
+    text-transform: uppercase;
+    font-size: 50px;
+}
+.headp{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.headbtn{
+    margin:auto ;
+}
+.headbutton{
+    width: 200px;
+    height: 70px;
+    background-color: goldenrod;
+    color: black;
+    font-size:20px;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 180px;
+    text-transform: uppercase;
+}
+.headbutton:hover{
+    background-color: rgba(218, 165, 32, 0.747);
+}
+.headbutton2{
+    width: 200px;
+    height: 70px;
+    background-color: black;
+    color: goldenrod;
+    font-size: 20px;
+    border: 2px solid goldenrod;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 50px;
+    text-transform: uppercase;
+}
+.headbutton2:hover{
+    background-color: rgb(27, 27, 27);
+}
+/* end head photo-------------------------------------------------------------------------------------------------------------- */
+/* start welcome to website------------------------------------------------------------------------------------------------- */
+.about-parent{
+    width: 100%;
+    height: 100vh;
+
+}
+.skills-parent{
+    margin-top: 200px;
+}
+.skills-details{
+    width: 30%;
+    height: 300px;
+    border: 1px solid goldenrod;
+    position: relative;
+    transition: 0.5s;
+    float: left;
+}
+.skills-details-center{
+    margin: 0 5%;
+}
+.skills-details::after{
+    content: "";
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: goldenrod;
+    visibility: hidden;
+    position: absolute;
+    transition: 0.5s;
+
+}
+.skills-details:hover::after{
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    z-index: -1;
+   
+
+}
+.skills-details:hover{
+    color: black;
+}
+.money{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 30px;
+}
+.skills-p{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+.skills-a{
+    margin-left: 35%;
+    color: rgb(141, 107, 22);
+    position: absolute;
+    z-index: 2;
+}
+/* end welcome to website----------------------------------------------------------------------------------------------------- */
+/* start prices---------------------------------------------------------------------------------------------------------------- */
+.welcome{
+    text-align: center;
+    padding-top: 50px;
+    text-transform: uppercase;
+    /* color: goldenrod; */
+    word-spacing: 5px;
+    font-size: 50px;
+}
+.line{
+    width: 380px;
+    height: 4px;
+    background-color: goldenrod;
+    margin: auto;
+    margin-top: 3px;
+}
+.line2{
+    width: 270px;
+    height: 4px;
+    background-color: goldenrod;
+    margin: auto;
+    margin-top: 3px;
+}
+.line3{
+    width: 160px;
+    height: 4px;
+    background-color: goldenrod;
+    margin: auto;
+    margin-top: 3px;
+}
+.line4{
+    width: 50px;
+    height: 4px;
+    background-color: goldenrod;
+    margin: auto;
+    margin-top: 3px;
+}
+.line5{
+    width: 10px;
+    height: 4px;
+    background-color: goldenrod;
+    margin: auto;
+    margin-top: 3px;
+}
+.parent{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.div1{
+    width: 28%;
+    height: 500px;
+    border: 3px solid goldenrod;
+    border-radius: 10px;
+    float: left;
+    transition: 0.8s;
+  
+}
+.div2{margin: 0px 8%;}
+.clearfix{
+    clear: both;
+}
+.div1:hover{
+    background-color: goldenrod;
+    color: black;
+    margin-top: -30px;
+}
+.div1:hover a{color: black;}
+.div1:hover button{
+    background-color: black;
+    color: goldenrod;
+}
+.div1:hover .circle{
+    border: 3px solid black;
+}
+.title{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 40px;
+}
+.circle{
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border: 3px solid goldenrod;
+    border-radius: 50%;
+    text-align: center;
+}
+.price{
+    margin-top:30px ;
+    font-size: 30px;
+}
+.month{
+    font-size: 25px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+.detailes{
+     margin: 30px 10px ;
+     text-transform: capitalize;
+     font-size: 30px;
+     text-align: center;
+}
+span{
+    display: block;
+    margin-top: 5px;
+}
+.a{
+    text-align: center;
+    color: goldenrod;
+}
+a{
+    /* display: block; */
+    color: goldenrod;
+    text-decoration: none;
+    font-size: 30px;
+}
+.div1:hover a:hover{
+    color: rgb(133, 101, 23);
+}
+.pricebutton{
+    margin-left: 25%;
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: goldenrod;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* end prices-------------------------------------------------------------------------------------------- */
+/* start featured works---------------------------------------------------------------------------------- */
+.featured-parent{
+    width: 100%;
+    /* height: 100vh; */
+    overflow: auto;
+}
+.featured-details-parent{
+    margin-top: 100px;
+}
+.featured-details{
+    width: 25%;
+    height: 400px;
+    /* border: 2px solid goldenrod; */
+    position: relative;
+    text-align: center;
+    float: left;
+}
+.featured-details-2{
+    margin: 0 12.5%;
+}
+.featured-details img{
+    width: 90%;
+    height: 90%;
+    margin-top: 5%;
+    margin-left:0;
+}
+.featured-overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.719);
+    /* opacity: 0.7; */
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    top: 0;
+    transition: 1s;
+}
+.featured-details:hover .featured-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+.featured-h2{
+    margin-top: 140px;
+    font-size: 30px;
+    text-transform: uppercase;
+
+}
+.featured-p{
+        font-size: 30px;
+        text-transform: capitalize  ;
+    margin: 10px 0;
+}
+.featured-icons{
+    font-size: 15px;
+}
+.featured-a{
+    margin-left: 15px;
+}
+/* end featured---------------------------------------------------------------------------------------------- */
+/* start happy--------------------------------------------------------------------------------------------- */
+.happy-parent{
+    width: 100%;
+    height: 300px;
+    background-image: url(../image/sec1-background.jpeg);
+    margin-top: 300px;
+    background-attachment: fixed;
+    background-size: contain;
+    /* background-color: rgba(0, 0, 0, 0.295); */
+}
+.happy-parent-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+.happy-content{
+    width: 25%;
+    height: 300px;
+    /* border: 1px solid goldenrod; */
+    position: relative;
+    float: left;
+}
+.happy-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.happy-overlay p i{
+    font-size: 60px;
+}
+.happy-content-p{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;    
+}
+.happy-content-p span{
+    font-size: 15px;
+}
+/* end happy---------------------------------------------------------------------------------------------------------------------- */
+/* start team------------------------------------------------------------------------------------------------------------- */
+.team-parent{
+    width: 100%;
+    margin-top: 300px;
+    height: 100vh;
+}
+.team-content-parent{
+    margin-top: 100px;
+}
+.team-content{
+    width: 25%;
+    height: 400px;
+    border: 1px solid goldenrod;
+    text-align: center;
+    position: relative;
+    transition: 1s;
+    float: left;
+}.team-content-2{
+    margin: 0 12.5%;
+}
+.team-content::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    background-color: goldenrod;
+    left: 0;
+    visibility: hidden;
+    transition: 1s;
+    z-index: -1;
+}
+.team-content:hover{
+    color: black;
+    /* transition: 1s; */
+}
+.team-content:hover::after{
+    visibility: visible;
+    height: 100%;
+
+
+}
+.team-img{
+    margin: auto;
+    width: 80%;
+    height:60% ;
+    position: relative;
+}
+.team-img img{
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+}
+.team-overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.397);
+    margin-top: 10%;
+    visibility: hidden;
+    /* transition: 1s; */
+
+}
+.team-content:hover .team-overlay{
+    visibility: visible;
+    /* transition: 1s; */
+}
+.team-overlay a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: goldenrod;
+    color: black;
+    text-align: center;
+    margin-left: auto;
+}
+.team-overlay a i{
+    line-height: 40px;
+    font-size: 30px;
+}
+.team-title{
+    margin-top: 30px;
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.team-info{
+    margin-top: 20px;
+    font-size: 20px;
+}
+/* end team------------------------------------------------------------------------------------------------------------------------------ */
+/* start choose------------------------------------------------------------------------------------------------------------------------ */
+.choose-parent{
+    width: 100%;
+    height: 100vh;
+    margin-top: 100px;
+}
+.choose-content{
+    float: left;
+    width: 50%;
+}
+.choose-content-parent{
+    margin-top: 20px;
+}
+.choose-img{
+    float: right;
+    width: 50%;
+    text-align: center;
+    margin-top: 100px;
+}
+.choose-img img{
+    width: 80%;
+    height: 400px;
+}
+
+.choose-circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: goldenrod;
+    display: inline-block;
+    margin-top: auto;
+}
+.choose-circle-2{
+    background-color:black;
+    border: 2px solid goldenrod;   
+    margin-left: 15px; 
+}
+.choose-circle:hover{
+    background-color: rgb(156, 118, 21);
+}
+.choose-p-content{
+    margin-top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.choose-p-1{
+    font-size: 20px;
+    margin-top: 10px;
+}
+/* end choose------------------------------------------------------------------------------------- */
+/* start our value------------------------------------------------------------------------------- */
+.value-parent{
+    width: 100%;
+    height: 100vh;
+
+}
+
+.value-content{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.value-content p{
+    text-transform: uppercase;
+    font-size: 70px;
+    margin-top: 30px;
+}
+.value-content span{
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.value-content ol{
+    padding-top: 15px;
+
+
+}
+.value-content ol li{
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+.value-icon{
+    width: 50%;
+    height: 100vh;
+    float: right;
+    /* border: 1px solid goldenrod; */
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid goldenrod;
+}
+.value-icon::after{
+    content: "";
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 78%;
+    left: 0;
+    background-color: rgb(126, 95, 18);
+}
+.value-icon-p{
+    width: 100%;
+    height: 100%;
+    font-size: 450px;
+    text-align: center;
+    line-height: 100vh;
+    transition: 3s;
+}
+.value-icon:hover .value-icon-p{
+    margin-top: -700px;
+}
+
+/* end our value------------------------------------------------------------------------------ */
+/* start  login----------------------------------------------------------------------------------- */
+.login-parent{
+    width: 100%;
+    height: 100vh;
+}
+.login-p{
+    width: 60%;
+    height: 100%;
+    float: left;
+
+}
+.login-p h2{
+    font-size: 150px;
+    text-transform: capitalize;
+    line-height: 100vh;
+    margin-left: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.login-input{
+    width: 40%;
+    height: 100vh;
+    float: right;
+    /* border: 1px solid goldenrod; */
+}
+.login-input input{
+    display: block;
+    width: 60%;
+    height: 100px;
+    margin: auto;
+    /* margin-top: 100px; */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 40px;
+    background-color: black;
+    color: goldenrod;
+    border-radius: 20px;
+    border: 2px solid goldenrod;
+}
+#input1{
+    margin-top: 100px;
+}
+#input2{
+    margin-top:20px ;
+}
+.login-input a, .login-input button{
+    display: block;
+}
+.login-input button{
+    margin: auto;
+    width: 60%;
+    height: 100px;
+    background-color: goldenrod;
+    border-radius: 20px;
+    margin-top: 30px;
+    text-transform: capitalize;
+    font-size: 30px;
+    border: 0;
+    cursor: pointer;
+}
+.login-input a{
+    text-align: center;
+    margin:30px 0;
+}
+.login-input hr{
+    color: goldenrod;
+}
+
+/* end login----------------------------------------------------------------------------------- */
+/* start copy------------------------------------------------------------------------------------- */
+.copy-parent{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    text-align: center;
+    position: relative;
+}
+.copy-img img{
+    margin-top: 40px;
+}
+.copy-a{
+    display: inline-block;
+    margin-top: 20px;
+}
+.copy-a a:hover{
+    color: chocolate;
+}
+.copy-a a{
+ margin-left: 20px;
+}
+.copy-content{
+margin-top: 50px;
+}
